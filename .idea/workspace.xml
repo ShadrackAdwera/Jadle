@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9522b0a5-ca1b-4582-9c48-9119562df804" name="Default Changelist" comment="" />
+    <list default="true" id="9522b0a5-ca1b-4582-9c48-9119562df804" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/FoodTypeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/RestaurantDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ReviewDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/Sql2oFoodTypeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/Sql2oRestaurantDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/Sql2oReviewDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/DB/create.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,16 +30,22 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1WJxNPuvi2cJe47sMNc1ErNSlHE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
   </component>
@@ -133,5 +150,16 @@
       <updated>1578881457829</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
