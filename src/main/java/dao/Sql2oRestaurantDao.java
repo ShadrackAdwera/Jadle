@@ -65,7 +65,7 @@ public class Sql2oRestaurantDao implements RestaurantDao {
     @Override
     public void deleteById(int id) {
         try (Connection con = sql2o.open()) {
-            String sql = "DELETE FROM restaurants HERE id = :id";
+            String sql = "DELETE FROM restaurants WHERE id = :id";
             con.createQuery(sql)
                     .addParameter("id", id)
                     .executeUpdate();
