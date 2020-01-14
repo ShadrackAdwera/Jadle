@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dao.Sql2oFoodTypeDaoTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-01-13T13:07:03" hostname="adwesh-HP-ENVY-x360-m6-Convertible" time="0.308">
+  <properties/>
+  <testcase name="addFoodTypeToRestaurantAddsTypeCorrectly" classname="dao.Sql2oFoodTypeDaoTest" time="0.22"/>
+  <testcase name="getAll" classname="dao.Sql2oFoodTypeDaoTest" time="0.012"/>
+  <testcase name="deleteingRestaurantAlsoUpdatesJoinTable" classname="dao.Sql2oFoodTypeDaoTest" time="0.025"/>
+  <testcase name="add_savesFoodTypeSuccessfully" classname="dao.Sql2oFoodTypeDaoTest" time="0.011"/>
+  <testcase name="clearAll" classname="dao.Sql2oFoodTypeDaoTest" time="0.016"/>
+  <testcase name="deleteById" classname="dao.Sql2oFoodTypeDaoTest" time="0.024"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
