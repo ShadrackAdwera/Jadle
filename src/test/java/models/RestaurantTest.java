@@ -33,6 +33,7 @@ public class RestaurantTest {
         Restaurant testRestaurant = setupRestaurant();
         assertEquals("97232", testRestaurant.getZipcode());
     }
+
     @Test
     public void getPhoneReturnsCorrectPhone() throws Exception {
         Restaurant testRestaurant = setupRestaurant();
@@ -55,7 +56,7 @@ public class RestaurantTest {
     public void setNameSetsCorrectName() throws Exception {
         Restaurant testRestaurant = setupRestaurant();
         testRestaurant.setName("Steak House");
-        assertNotEquals("Fish Witch",testRestaurant.getName());
+        assertNotEquals("Fish Witch", testRestaurant.getName());
     }
 
     @Test
@@ -71,6 +72,7 @@ public class RestaurantTest {
         testRestaurant.setZipcode("78902");
         assertNotEquals("97232", testRestaurant.getZipcode());
     }
+
     @Test
     public void setPhoneSetsCorrectPhone() throws Exception {
         Restaurant testRestaurant = setupRestaurant();
@@ -92,11 +94,11 @@ public class RestaurantTest {
         assertNotEquals("hellofishy@fishwitch.com", testRestaurant.getEmail());
     }
 
-    public Restaurant setupRestaurant (){
+    public Restaurant setupRestaurant() {
         return new Restaurant("Fish Witch", "214 NE Broadway", "97232", "503-402-9874", "http://fishwitch.com", "hellofishy@fishwitch.com");
     }
 
-    public Restaurant setupAltRestaurant (){
+    public Restaurant setupAltRestaurant() {
         return new Restaurant("Fish Witch", "214 NE Broadway", "97232", "503-402-9874");
     }
 }

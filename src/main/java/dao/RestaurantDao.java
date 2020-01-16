@@ -7,12 +7,15 @@ import java.util.List;
 
 public interface RestaurantDao {
     //create
-    void add (Restaurant restaurant);
+    void add(Restaurant restaurant);
+
     void addRestaurantToFoodType(Restaurant restaurant, Foodtype foodtype);
 
     //read
     List<Restaurant> getAll();
+
     Restaurant findById(int id);
+
     List<Foodtype> getAllFoodTypesByRestaurant(int restaurantId);
 
     //update
@@ -20,5 +23,6 @@ public interface RestaurantDao {
 
     //delete
     void deleteById(int id);
+
     void clearAll();
 }

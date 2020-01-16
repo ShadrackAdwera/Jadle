@@ -34,8 +34,9 @@ public class Sql2oReviewDaoTest {
         foodTypeDao.clearAll(); //clear all restaurants after every test
         reviewDao.clearAll(); //clear all restaurants after every test
     }
+
     @AfterClass //changed to @AfterClass (run once after all tests in this file completed)
-    public static void shutDown() throws Exception{ //changed to static
+    public static void shutDown() throws Exception { //changed to static
         conn.close(); // close connection once after this entire test file is finished
         System.out.println("connection closed");
     }
@@ -44,10 +45,10 @@ public class Sql2oReviewDaoTest {
     public void addingReviewSetsId() throws Exception {
         Restaurant testRestaurant = setupRestaurant();
         restaurantDao.add(testRestaurant);
-        Review testReview = new Review("Captain Kirk", 3, "foodcoma!",testRestaurant.getId());
+        Review testReview = new Review("Captain Kirk", 3, "foodcoma!", testRestaurant.getId());
         int originalReviewId = testReview.getId();
         reviewDao.add(testReview);
-        assertNotEquals(originalReviewId,testReview.getId());
+        assertNotEquals(originalReviewId, testReview.getId());
     }
 
     @Test
@@ -88,14 +89,14 @@ public class Sql2oReviewDaoTest {
     public void timeStampIsReturnedCorrectly() throws Exception {
         Restaurant testRestaurant = setupRestaurant();
         restaurantDao.add(testRestaurant);
-        Review testReview = new Review("Captain Kirk", 3,"foodcoma!", testRestaurant.getId());
+        Review testReview = new Review("Captain Kirk", 3, "foodcoma!", testRestaurant.getId());
         reviewDao.add(testReview);
 
         long creationTime = testReview.getCreatedat();
         long savedTime = reviewDao.getAll().get(0).getCreatedat();
         String formattedCreationTime = testReview.getFormattedCreatedAt();
         String formattedSavedTime = reviewDao.getAll().get(0).getFormattedCreatedAt();
-        assertEquals(formattedCreationTime,formattedSavedTime);
+        assertEquals(formattedCreationTime, formattedSavedTime);
         assertEquals(creationTime, savedTime);
     }
 
@@ -107,8 +108,7 @@ public class Sql2oReviewDaoTest {
         reviewDao.add(testReview);
         try {
             Thread.sleep(2000);
-        }
-        catch (InterruptedException ex){
+        } catch (InterruptedException ex) {
             ex.printStackTrace();
         }
 
@@ -117,8 +117,7 @@ public class Sql2oReviewDaoTest {
 
         try {
             Thread.sleep(2000);
-        }
-        catch (InterruptedException ex){
+        } catch (InterruptedException ex) {
             ex.printStackTrace();
         }
 
@@ -127,8 +126,7 @@ public class Sql2oReviewDaoTest {
 
         try {
             Thread.sleep(2000);
-        }
-        catch (InterruptedException ex){
+        } catch (InterruptedException ex) {
             ex.printStackTrace();
         }
 

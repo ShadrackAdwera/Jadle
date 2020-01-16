@@ -40,14 +40,12 @@ public class App {
             Restaurant restaurant = restaurantDao.findById(restaurantId);
             Foodtype foodtype = foodtypeDao.findById(foodtypeId);
 
-
-            if (restaurant != null && foodtype != null){
+            if (restaurant != null && foodtype != null) {
                 //both exist and can be associated
                 foodtypeDao.addFoodtypeToRestaurant(foodtype, restaurant);
                 res.status(201);
-                return gson.toJson(String.format("Restaurant '%s' and Foodtype '%s' have been associated",restaurant.getName(), foodtype.getName()));
-            }
-            else {
+                return gson.toJson(String.format("Restaurant '%s' and Foodtype '%s' have been associated", restaurant.getName(), foodtype.getName()));
+            } else {
                 throw new ApiException(404, String.format("Restaurant or Foodtype does not exist"));
             }
         });
@@ -55,13 +53,11 @@ public class App {
         get("/restaurants/:id/foodtypes", "application/json", (req, res) -> {
             int restaurantId = Integer.parseInt(req.params("id"));
             Restaurant restaurantToFind = restaurantDao.findById(restaurantId);
-            if (restaurantToFind == null){
+            if (restaurantToFind == null) {
                 throw new ApiException(404, String.format("No restaurant with the id: \"%s\" exists", req.params("id")));
-            }
-            else if (restaurantDao.getAllFoodTypesByRestaurant(restaurantId).size()==0){
+            } else if (restaurantDao.getAllFoodTypesByRestaurant(restaurantId).size() == 0) {
                 return "{\"message\":\"I'm sorry, but no foodtypes are listed for this restaurant.\"}";
-            }
-            else {
+            } else {
                 return gson.toJson(restaurantDao.getAllFoodTypesByRestaurant(restaurantId));
             }
         });
@@ -69,13 +65,11 @@ public class App {
         get("/foodtypes/:id/restaurants", "application/json", (req, res) -> {
             int foodtypeId = Integer.parseInt(req.params("id"));
             Foodtype foodtypeToFind = foodtypeDao.findById(foodtypeId);
-            if (foodtypeToFind == null){
+            if (foodtypeToFind == null) {
                 throw new ApiException(404, String.format("No foodtype with the id: \"%s\" exists", req.params("id")));
-            }
-            else if (foodtypeDao.getAllRestaurantsForAFoodtype(foodtypeId).size()==0){
+            } else if (foodtypeDao.getAllRestaurantsForAFoodtype(foodtypeId).size() == 0) {
                 return "{\"message\":\"I'm sorry, but no restaurants are listed for this foodtype.\"}";
-            }
-            else {
+            } else {
                 return gson.toJson(foodtypeDao.getAllRestaurantsForAFoodtype(foodtypeId));
             }
         });
@@ -103,11 +97,9 @@ public class App {
         get("/restaurants", "application/json", (req, res) -> {
             System.out.println(restaurantDao.getAll());
 
-            if(restaurantDao.getAll().size() > 0){
+            if (restaurantDao.getAll().size() > 0) {
                 return gson.toJson(restaurantDao.getAll());
-            }
-
-            else {
+            } else {
                 return "{\"message\":\"I'm sorry, but no restaurants are currently listed in the database.\"}";
             }
 
@@ -116,7 +108,7 @@ public class App {
         get("/restaurants/:id", "application/json", (req, res) -> { //accept a request in format JSON from an app
             int restaurantId = Integer.parseInt(req.params("id"));
             Restaurant restaurantToFind = restaurantDao.findById(restaurantId);
-            if (restaurantToFind == null){
+            if (restaurantToFind == null) {
                 throw new ApiException(404, String.format("No restaurant with the id: \"%s\" exists", req.params("id")));
             }
             return gson.toJson(restaurantToFind);
@@ -128,7 +120,7 @@ public class App {
             Restaurant restaurantToFind = restaurantDao.findById(restaurantId);
             List<Review> allReviews;
 
-            if (restaurantToFind == null){
+            if (restaurantToFind == null) {
                 throw new ApiException(404, String.format("No restaurant with the id: \"%s\" exists", req.params("id")));
             }
 
@@ -141,7 +133,7 @@ public class App {
             int restaurantId = Integer.parseInt(req.params("id"));
             Restaurant restaurantToFind = restaurantDao.findById(restaurantId);
             List<Review> allReviews;
-            if (restaurantToFind == null){
+            if (restaurantToFind == null) {
                 throw new ApiException(404, String.format("No restaurant with the id: \"%s\" exists", req.params("id")));
             }
             allReviews = reviewDao.getAllReviewsByRestaurantSortedNewestToOldest(restaurantId);
@@ -173,7 +165,7 @@ public class App {
         });
 
 
-        after((req, res) ->{
+        after((req, res) -> {
             res.type("application/json");
         });
 

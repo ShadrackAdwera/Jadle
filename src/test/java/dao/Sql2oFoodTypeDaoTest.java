@@ -27,7 +27,7 @@ public class Sql2oFoodTypeDaoTest {
     }
 
     @After
-    public void shutDown() throws Exception{ //changed to static
+    public void shutDown() throws Exception { //changed to static
         System.out.println("clearing database");
         restaurantDao.clearAll(); //clear all restaurants after every test
         foodTypeDao.clearAll(); //clear all restaurants after every test
@@ -72,6 +72,7 @@ public class Sql2oFoodTypeDaoTest {
 
 
     }
+
     @Test
     public void addFoodTypeToRestaurantAddsTypeCorrectly() throws Exception {
 
@@ -90,9 +91,10 @@ public class Sql2oFoodTypeDaoTest {
 
         assertEquals(2, foodTypeDao.getAllRestaurantsForAFoodtype(testFoodtype.getId()).size());
     }
+
     @Test
     public void deleteingRestaurantAlsoUpdatesJoinTable() throws Exception {
-        Foodtype testFoodtype  = new Foodtype("Seafood");
+        Foodtype testFoodtype = new Foodtype("Seafood");
         foodTypeDao.add(testFoodtype);
 
         Restaurant testRestaurant = setupRestaurant();
@@ -101,32 +103,34 @@ public class Sql2oFoodTypeDaoTest {
         Restaurant altRestaurant = setupAltRestaurant();
         restaurantDao.add(altRestaurant);
 
-        restaurantDao.addRestaurantToFoodType(testRestaurant,testFoodtype);
+        restaurantDao.addRestaurantToFoodType(testRestaurant, testFoodtype);
         restaurantDao.addRestaurantToFoodType(altRestaurant, testFoodtype);
 
         restaurantDao.deleteById(testRestaurant.getId());
         assertEquals(0, restaurantDao.getAllFoodTypesByRestaurant(testRestaurant.getId()).size());
     }
 
-//helper
-    public Foodtype setUpFoodType(){
-    Foodtype foodtype = new Foodtype("Fish");
-    foodTypeDao.add(foodtype);
-    return foodtype;
+    //helper
+    public Foodtype setUpFoodType() {
+        Foodtype foodtype = new Foodtype("Fish");
+        foodTypeDao.add(foodtype);
+        return foodtype;
     }
-    public Foodtype setupNewFoodtype(){
+
+    public Foodtype setupNewFoodtype() {
         Foodtype foodtype = new Foodtype("Chicken");
         foodTypeDao.add(foodtype);
         return foodtype;
     }
+
     public Review setupReview() {
-        Review review = new Review("Deez Nuts",3,"HA!", 3);
+        Review review = new Review("Deez Nuts", 3, "HA!", 3);
         reviewDao.add(review);
         return review;
     }
 
     public Review setupReviewForRestaurant(Restaurant restaurant) {
-        Review review = new Review("Kim", 4,"Great", restaurant.getId());
+        Review review = new Review("Kim", 4, "Great", restaurant.getId());
         reviewDao.add(review);
         return review;
     }
@@ -136,7 +140,8 @@ public class Sql2oFoodTypeDaoTest {
         restaurantDao.add(restaurant);
         return restaurant;
     }
-    public Restaurant setupAltRestaurant(){
+
+    public Restaurant setupAltRestaurant() {
         Restaurant restaurant = new Restaurant("Fish Witch", "214 NE Broadway", "97232", "503-402-9874", "http://fishwitch.com", "hellofishy@fishwitch.com");
         restaurantDao.add(restaurant);
         return restaurant;

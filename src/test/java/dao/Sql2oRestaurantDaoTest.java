@@ -40,8 +40,9 @@ public class Sql2oRestaurantDaoTest {
         foodTypeDao.clearAll(); //clear all restaurants after every test
         reviewDao.clearAll();
     }
+
     @AfterClass
-    public static void shutDown() throws Exception{ //changed to static
+    public static void shutDown() throws Exception { //changed to static
         conn.close(); // close connection once after this entire test file is finished
         System.out.println("connection closed");
     }
@@ -87,18 +88,19 @@ public class Sql2oRestaurantDaoTest {
         restaurantDao.clearAll();
         assertEquals(0, restaurantDao.getAll().size());
     }
+
     @Test
     public void RestaurantReturnsFoodTypesCorrectly() throws Exception {
-        Foodtype testFoodtype  = new Foodtype("Seafood");
+        Foodtype testFoodtype = new Foodtype("Seafood");
         foodTypeDao.add(testFoodtype);
 
-        Foodtype otherFoodtype  = new Foodtype("Bar Food");
+        Foodtype otherFoodtype = new Foodtype("Bar Food");
         foodTypeDao.add(otherFoodtype);
 
         Restaurant testRestaurant = setUpRestaurant();
         restaurantDao.add(testRestaurant);
-        restaurantDao.addRestaurantToFoodType(testRestaurant,testFoodtype);
-        restaurantDao.addRestaurantToFoodType(testRestaurant,otherFoodtype);
+        restaurantDao.addRestaurantToFoodType(testRestaurant, testFoodtype);
+        restaurantDao.addRestaurantToFoodType(testRestaurant, otherFoodtype);
 
         Foodtype[] foodtypes = {testFoodtype, otherFoodtype}; //oh hi what is this? Observe how we use its assertion below.
 
@@ -106,34 +108,37 @@ public class Sql2oRestaurantDaoTest {
     }
 
     //helper method
-    public Restaurant setUpRestaurant(){
-        Restaurant restaurant = new Restaurant("Ankole","Kilimani","112-33","07654321","ankole.com","ankole@com");
+    public Restaurant setUpRestaurant() {
+        Restaurant restaurant = new Restaurant("Ankole", "Kilimani", "112-33", "07654321", "ankole.com", "ankole@com");
         restaurantDao.add(restaurant);
         return restaurant;
     }
-    public Foodtype setUpFoodType(){
+
+    public Foodtype setUpFoodType() {
         Foodtype foodtype = new Foodtype("Fish");
         foodTypeDao.add(foodtype);
         return foodtype;
     }
-    public Foodtype setupNewFoodtype(){
+
+    public Foodtype setupNewFoodtype() {
         Foodtype foodtype = new Foodtype("Chicken");
         foodTypeDao.add(foodtype);
         return foodtype;
     }
+
     public Review setupReview() {
-        Review review = new Review("Kim", 3,"Great", 555);
+        Review review = new Review("Kim", 3, "Great", 555);
         reviewDao.add(review);
         return review;
     }
 
     public Review setupReviewForRestaurant(Restaurant restaurant) {
-        Review review = new Review("Kim", 4,"Great", restaurant.getId());
+        Review review = new Review("Kim", 4, "Great", restaurant.getId());
         reviewDao.add(review);
         return review;
     }
 
-    public Restaurant setupAltRestaurant(){
+    public Restaurant setupAltRestaurant() {
         Restaurant restaurant = new Restaurant("Fish Witch", "214 NE Broadway", "97232", "503-402-9874", "http://fishwitch.com", "hellofishy@fishwitch.com");
         restaurantDao.add(restaurant);
         return restaurant;

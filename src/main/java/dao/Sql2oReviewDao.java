@@ -8,9 +8,12 @@ import org.sql2o.Sql2oException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sql2oReviewDao implements ReviewDao{
+public class Sql2oReviewDao implements ReviewDao {
     private final Sql2o sql2o;
-    public Sql2oReviewDao(Sql2o sql2o) { this.sql2o = sql2o; }
+
+    public Sql2oReviewDao(Sql2o sql2o) {
+        this.sql2o = sql2o;
+    }
 
     @Override
     public void add(Review review) {
@@ -48,16 +51,14 @@ public class Sql2oReviewDao implements ReviewDao{
         List<Review> unsortedReviews = getAllReviewsByRestaurant(restaurantId);
         List<Review> sortedReviews = new ArrayList<>();
         int i = 1;
-        for (Review review : unsortedReviews){
+        for (Review review : unsortedReviews) {
             int comparisonResult;
             if (i == unsortedReviews.size()) { //we need to do some funky business here to avoid an arrayindex exception and handle the last element properly
-                if (review.compareTo(unsortedReviews.get(i-1)) == -1){
-                    sortedReviews.add(0, unsortedReviews.get(i-1));
+                if (review.compareTo(unsortedReviews.get(i - 1)) == -1) {
+                    sortedReviews.add(0, unsortedReviews.get(i - 1));
                 }
                 break;
-            }
-
-            else {
+            } else {
                 if (review.compareTo(unsortedReviews.get(i)) == -1) { //first object was made earlier than second object
                     sortedReviews.add(0, unsortedReviews.get(i));
                     i++;

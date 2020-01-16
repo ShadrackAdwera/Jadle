@@ -37,7 +37,7 @@ public class FoodtypeTest {
     }
 
     // helper
-    public Foodtype setupFoodtype(){
+    public Foodtype setupFoodtype() {
         return new Foodtype("dessert");
     }
 }
