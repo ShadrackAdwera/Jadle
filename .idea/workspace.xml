@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9522b0a5-ca1b-4582-9c48-9119562df804" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/FoodTypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/FoodTypeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/RestaurantDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/RestaurantDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ReviewDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ReviewDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Sql2oFoodTypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Sql2oFoodTypeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Sql2oReviewDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Sql2oReviewDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/ApiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/ApiException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dao/Sql2oFoodTypeDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/Sql2oFoodTypeDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dao/Sql2oRestaurantDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/Sql2oRestaurantDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dao/Sql2oReviewDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/Sql2oReviewDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/models/FoodtypeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/FoodtypeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/models/RestaurantTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/RestaurantTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/models/ReviewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/ReviewTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jadle.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jadle_test.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,8 +45,11 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1WJxNPuvi2cJe47sMNc1ErNSlHE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -220,5 +212,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
