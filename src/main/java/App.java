@@ -16,7 +16,15 @@ import java.util.List;
 import java.util.Map;
 
 public class App {
+    static int getHerokuAssignedPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
+    }
     public static void main(String[] args) {
+        port(getHerokuAssignedPort());
         Sql2oFoodTypeDao foodtypeDao;
         Sql2oRestaurantDao restaurantDao;
         Sql2oReviewDao reviewDao;
@@ -24,8 +32,10 @@ public class App {
         Gson gson = new Gson();
 
         staticFileLocation("/public");
-        String connectionString = "jdbc:postgresql://localhost:5432/jadle";
-        Sql2o sql2o = new Sql2o(connectionString, "adwesh", "password");
+//        String connectionString = "jdbc:postgresql://localhost:5432/jadle";
+//        Sql2o sql2o = new Sql2o(connectionString, "adwesh", "password");
+        String connectionString = "jdbc:postgresql://ec2-174-129-33-2.compute-1.amazonaws.com:5432/dbj6tt6lfshtn";
+        Sql2o sql2o = new Sql2o(connectionString, "kwfcxpkpzbxmdr", "83e153a0e7ac32fdd721072eec03cd29347970b75ec6a848377cb75dd0a83fb4");
 
         restaurantDao = new Sql2oRestaurantDao(sql2o);
         foodtypeDao = new Sql2oFoodTypeDao(sql2o);
