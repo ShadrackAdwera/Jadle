@@ -3,33 +3,42 @@ package dao;
 import models.Foodtype;
 import models.Restaurant;
 import models.Review;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
 import static org.junit.Assert.*;
 
 public class Sql2oFoodTypeDaoTest {
-    private Connection conn;
-    private Sql2oReviewDao reviewDao;
-    private Sql2oRestaurantDao restaurantDao;
-    private Sql2oFoodTypeDao foodTypeDao;
+    private static Connection conn;
+    private static Sql2oReviewDao reviewDao;
+    private static Sql2oRestaurantDao restaurantDao;
+    private static Sql2oFoodTypeDao foodTypeDao;
 
-    @Before
-    public void setUp() throws Exception {
-        String connectionString = "jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:DB/create.sql'";
-        Sql2o sql2o = new Sql2o(connectionString, "", "");
-        reviewDao = new Sql2oReviewDao(sql2o);
+    @BeforeClass
+    public static void setUp() throws Exception {
+        String connectionString = "jdbc:postgresql://localhost:5432/jadle_test"; //connect to postgres test database
+        Sql2o sql2o = new Sql2o(connectionString, null, null); //changed user and pass to null for mac users...Linux & windows need strings
         restaurantDao = new Sql2oRestaurantDao(sql2o);
         foodTypeDao = new Sql2oFoodTypeDao(sql2o);
+        reviewDao = new Sql2oReviewDao(sql2o);
         conn = sql2o.open();
+
     }
 
     @After
-    public void tearDown() throws Exception {
-        conn.close();
+    public void shutDown() throws Exception{ //changed to static
+        System.out.println("clearing database");
+        restaurantDao.clearAll(); //clear all restaurants after every test
+        foodTypeDao.clearAll(); //clear all restaurants after every test
+        reviewDao.clearAll();
+    }
+
+    @AfterClass
+    public static void tearDown() throws Exception {
+        conn.close(); // close connection once after this entire test file is finished
+        System.out.println("connection closed");
+
     }
 
     @Test

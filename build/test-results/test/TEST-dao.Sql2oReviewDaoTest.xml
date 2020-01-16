@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dao.Sql2oReviewDaoTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-01-16T02:53:00" hostname="adwesh-HP-ENVY-x360-m6-Convertible" time="6.422">
+<testsuite name="dao.Sql2oReviewDaoTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-01-16T11:31:58" hostname="adwesh-HP-ENVY-x360-m6-Convertible" time="8.332">
   <properties/>
-  <testcase name="reviewsAreReturnedInCorrectOrder" classname="dao.Sql2oReviewDaoTest" time="6.289"/>
-  <testcase name="getAllReviewsByRestaurant" classname="dao.Sql2oReviewDaoTest" time="0.024"/>
-  <testcase name="getAll" classname="dao.Sql2oReviewDaoTest" time="0.024"/>
-  <testcase name="addingReviewSetsId" classname="dao.Sql2oReviewDaoTest" time="0.011"/>
-  <testcase name="timeStampIsReturnedCorrectly" classname="dao.Sql2oReviewDaoTest" time="0.022"/>
-  <testcase name="clearAll" classname="dao.Sql2oReviewDaoTest" time="0.018"/>
-  <testcase name="deleteById" classname="dao.Sql2oReviewDaoTest" time="0.031"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="reviewsAreReturnedInCorrectOrder" classname="dao.Sql2oReviewDaoTest" time="6.7"/>
+  <testcase name="getAllReviewsByRestaurant" classname="dao.Sql2oReviewDaoTest" time="0.369"/>
+  <testcase name="getAll" classname="dao.Sql2oReviewDaoTest" time="0.322"/>
+  <testcase name="addingReviewSetsId" classname="dao.Sql2oReviewDaoTest" time="0.244"/>
+  <testcase name="timeStampIsReturnedCorrectly" classname="dao.Sql2oReviewDaoTest" time="0.298"/>
+  <testcase name="clearAll" classname="dao.Sql2oReviewDaoTest" time="0.144"/>
+  <testcase name="deleteById" classname="dao.Sql2oReviewDaoTest" time="0.249"/>
+  <system-out><![CDATA[clearing database
+clearing database
+clearing database
+clearing database
+clearing database
+clearing database
+clearing database
+connection closed
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
