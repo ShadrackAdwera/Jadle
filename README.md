@@ -10,3 +10,9 @@
 |  /restaurants/:id               | Displays a restaurant information based on its id    |
 |  /restaurants/:id/reviews       | Displays all reviews on a given restaurant           |
 |  /restaurants/:id/sortedReviews | Sorts a review based on time added                   |
+
+### License
+
+#### Copyright (c) 2019 Shadrack Adwera
+
+#### Licenced under the [MIT License](LICENSE)
