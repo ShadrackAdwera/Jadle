@@ -115,13 +115,13 @@ public class Sql2oRestaurantDaoTest {
         return foodtype;
     }
     public Review setupReview() {
-        Review review = new Review("great", "Kim", 4, 555);
+        Review review = new Review("Kim", 3,"Great", 555);
         reviewDao.add(review);
         return review;
     }
 
     public Review setupReviewForRestaurant(Restaurant restaurant) {
-        Review review = new Review("great", "Kim", 4, restaurant.getId());
+        Review review = new Review("Kim", 4,"Great", restaurant.getId());
         reviewDao.add(review);
         return review;
     }

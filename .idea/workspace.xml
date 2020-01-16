@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9522b0a5-ca1b-4582-9c48-9119562df804" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/ApiException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" afterDir="false" />
@@ -22,24 +21,25 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/dao/FoodTypeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/dao/FoodTypeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/dao/ReviewDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/dao/ReviewDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/dao/Sql2oFoodTypeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/dao/Sql2oFoodTypeDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/dao/Sql2oReviewDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/dao/Sql2oReviewDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/models/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/models/Review.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/dao/Sql2oFoodTypeDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/dao/Sql2oFoodTypeDaoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/dao/Sql2oRestaurantDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/dao/Sql2oRestaurantDaoTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/dao/Sql2oReviewDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/dao/Sql2oReviewDaoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/dao.Sql2oFoodTypeDaoTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/models/ReviewTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/models/ReviewTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/dao.Sql2oReviewDaoTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/dao.Sql2oReviewDaoTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/dao.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/dao.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/DB/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/DB/create.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-dao.Sql2oFoodTypeDaoTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-dao.Sql2oReviewDaoTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-dao.Sql2oReviewDaoTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/ReviewDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ReviewDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/Sql2oReviewDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Sql2oReviewDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DB/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DB/create.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dao/Sql2oFoodTypeDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/Sql2oFoodTypeDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dao/Sql2oRestaurantDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/Sql2oRestaurantDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/dao/Sql2oReviewDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/Sql2oReviewDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/ReviewTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/ReviewTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -130,12 +130,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Sql2oFoodTypeDaoTest.deleteingRestaurantAlsoUpdatesJoinTable" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Sql2oReviewDaoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;dao.Sql2oFoodTypeDaoTest.deleteingRestaurantAlsoUpdatesJoinTable&quot;" />
+        <option name="scriptParameters" value="--tests &quot;dao.Sql2oReviewDaoTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -150,12 +150,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Sql2oReviewDaoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Sql2oReviewDaoTest.getAllReviewsByRestaurant" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;dao.Sql2oReviewDaoTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;dao.Sql2oReviewDaoTest.getAllReviewsByRestaurant&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -213,10 +213,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Sql2oReviewDaoTest" />
+        <item itemvalue="Gradle.Sql2oReviewDaoTest.getAllReviewsByRestaurant" />
         <item itemvalue="Gradle.Sql2oReviewDaoTest.reviewsAreReturnedInCorrectOrder" />
         <item itemvalue="Gradle.Sql2oReviewDaoTest.timeStampIsReturnedCorrectly" />
         <item itemvalue="Gradle.Sql2oFoodTypeDaoTest" />
-        <item itemvalue="Gradle.Sql2oFoodTypeDaoTest.deleteingRestaurantAlsoUpdatesJoinTable" />
       </list>
     </recent_temporary>
   </component>

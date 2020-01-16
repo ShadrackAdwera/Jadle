@@ -24,7 +24,7 @@ public class App {
         Gson gson = new Gson();
 
         staticFileLocation("/public");
-        String connectionString = "jdbc:h2:~/jadle.db;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
+        String connectionString = "jdbc:h2:~/jadle.db;INIT=RUNSCRIPT from 'classpath:DB/create.sql'";
         Sql2o sql2o = new Sql2o(connectionString, "", "");
 
         restaurantDao = new Sql2oRestaurantDao(sql2o);
@@ -45,7 +45,7 @@ public class App {
                 //both exist and can be associated
                 foodtypeDao.addFoodtypeToRestaurant(foodtype, restaurant);
                 res.status(201);
-                return gson.toJson(String.format("Restaurant '%s' and Foodtype '%s' have been associated",foodtype.getName(), restaurant.getName()));
+                return gson.toJson(String.format("Restaurant '%s' and Foodtype '%s' have been associated",restaurant.getName(), foodtype.getName()));
             }
             else {
                 throw new ApiException(404, String.format("Restaurant or Foodtype does not exist"));
@@ -84,9 +84,9 @@ public class App {
         post("/restaurants/:restaurantId/reviews/new", "application/json", (req, res) -> {
             int restaurantId = Integer.parseInt(req.params("restaurantId"));
             Review review = gson.fromJson(req.body(), Review.class);
-            review.setCreatedAt();
+            review.setCreatedat();
             review.setFormattedCreatedAt();
-            review.setRestaurantId(restaurantId); //we need to set this separately because it comes from our route, not our JSON input.
+            review.setRestaurantId(restaurantId); //comes from our route, not JSON input.
             reviewDao.add(review);
             res.status(201);
             return gson.toJson(review);
